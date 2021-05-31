@@ -96,7 +96,7 @@ const Header = (props) => {
                 height="350px"
                 src="https://d26a57ydsghvgx.cloudfront.net/product/Customer%20Story%20Images/OLX3.jpg"
                 className="d-block w-100"
-                alt="..."
+                alt=".."
               />
             </div>
           </div>
