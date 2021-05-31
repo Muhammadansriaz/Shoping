@@ -258,7 +258,7 @@ const Ads = (props) => {
                         </div>
                       </div>
                     </>
-                    <a
+                    <button
                       onClick={() => {
                         dell_item(ind);
                       }}
@@ -267,7 +267,7 @@ const Ads = (props) => {
                       className="btn btn-primary"
                     >
                       Dell
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
