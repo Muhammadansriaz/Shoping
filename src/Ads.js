@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import "./Ads.css";
 const Ads = (props) => {
   let [product, set_product] = useState([
