@@ -114,44 +114,31 @@ const Ads = (props) => {
           All Categories
         </button>
         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a
+          <button
             onClick={(ev) => {
               props.setSearch("car");
             }}
-            className="dropdown-item"
+            className="dropdown-item btn"
           >
             car
-          </a>
-          <a
-            onClick={() => {
-              props.setSearch("Skin");
-            }}
-            className="dropdown-item"
-          >
-            Skin & Hair
-          </a>
-          <a
+          </button>
+          <button onClick={() => {props.setSearch("Skin");}}className="dropdown-item btn">hello</button>
+          <button
             onClick={() => {
               props.setSearch("Mobile");
             }}
-            className="dropdown-item"
+            className="dropdown-item btn"
           >
             Mobiles
-          </a>
-          <a className="dropdown-item" href="#">
-            Books, Sports & Hobbies
-          </a>
-          <a className="dropdown-item" href="#">
-            Tablets
-          </a>
-          <a
+          </button>
+          <button
             onClick={() => {
               props.setSearch("Grocory");
             }}
-            className="dropdown-item"
+            className="dropdown-item btn"
           >
             Grocory
-          </a>
+          </button>
         </div>
       </div>
       <div
