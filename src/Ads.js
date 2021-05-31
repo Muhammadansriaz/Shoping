@@ -119,7 +119,6 @@ const Ads = (props) => {
               props.setSearch("car");
             }}
             className="dropdown-item"
-            href="#"
           >
             car
           </a>
@@ -128,7 +127,6 @@ const Ads = (props) => {
               props.setSearch("Skin");
             }}
             className="dropdown-item"
-            href="#"
           >
             Skin & Hair
           </a>
@@ -137,7 +135,6 @@ const Ads = (props) => {
               props.setSearch("Mobile");
             }}
             className="dropdown-item"
-            href="#"
           >
             Mobiles
           </a>
@@ -152,7 +149,6 @@ const Ads = (props) => {
               props.setSearch("Grocory");
             }}
             className="dropdown-item"
-            href="#"
           >
             Grocory
           </a>
@@ -280,7 +276,7 @@ const Ads = (props) => {
                         dell_item(ind);
                       }}
                       style={{ marginLeft: "20px" }}
-                      href="#"
+        
                       className="btn btn-primary"
                     >
                       Dell
