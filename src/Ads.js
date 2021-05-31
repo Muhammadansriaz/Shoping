@@ -123,7 +123,7 @@ const Ads = (props) => {
             car
           </a>
           <a
-            onClick={(ev) => {
+            onClick={() => {
               props.setSearch("Skin");
             }}
             className="dropdown-item"
@@ -131,7 +131,7 @@ const Ads = (props) => {
             Skin & Hair
           </a>
           <a
-            onClick={(ev) => {
+            onClick={() => {
               props.setSearch("Mobile");
             }}
             className="dropdown-item"
@@ -145,7 +145,7 @@ const Ads = (props) => {
             Tablets
           </a>
           <a
-            onClick={(ev) => {
+            onClick={() => {
               props.setSearch("Grocory");
             }}
             className="dropdown-item"
