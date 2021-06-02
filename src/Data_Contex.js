@@ -2,7 +2,7 @@ import React from 'react'
 import { createContext,useState } from 'react';
 
 
-export let Data_Contex = createContext()
+export let DATA_CONTEX = createContext()
 
 export const DataProvider = (props)=>{
     let [product, set_product] = useState([
@@ -86,6 +86,6 @@ export const DataProvider = (props)=>{
         },
       ]);
       return(
-        <Data_Contex.Provider value = {[product,set_product]}>{props.children}</Data_Contex.Provider>
+        <DATA_CONTEX.Provider value = {[product,set_product]}>{props.children}</DATA_CONTEX.Provider>
       )
 }
