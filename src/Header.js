@@ -1,6 +1,25 @@
-import React from "react";
-
+import React, {useState,useContext } from "react";
+import {Data_Contex} from './Data_Contex'
 const Header = (props) => {
+  let [product,set_product]  = useContext(Data_Contex)
+  let [new_img,set_newimg] = useState()
+  let [new_des,set_newdes]  = useState()
+  let [new_name,set_newname]   = useState()
+  function Add_product(){
+    URL.createObjectURL(new_img);
+    var reader = new FileReader();
+    reader.addEventListener("load", () => {
+      var url = reader.result;
+      new_obj.img = url;
+      new_obj.name = new_name;
+      new_obj.description = new_des;
+      product.push(new_obj)
+      set_product([...product]);
+    });
+    reader.readAsDataURL(new_img);
+    let new_obj = {
+    } 
+  }
   return (
     <div>
       <header className="py-3 mb-3 border-bottom">
@@ -39,9 +58,94 @@ const Header = (props) => {
                 aria-label="Search"
               />
             </form>
-            <button type="button" class="btn btn-outline-dark">
-              Search
-            </button>
+
+
+
+
+            <>
+  {/* Button trigger modal */}
+  <button type="button" className="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModalCenter">
+    Add
+  </button>
+  {/* Modal */}
+  <div className="modal fade" id="exampleModalCenter" tabIndex={-1} role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div className="modal-dialog modal-dialog-centered" role="document">
+      <div className="modal-content">
+        <div className="modal-header">
+          <h5 className="modal-title" id="exampleModalLongTitle">New Item</h5>
+          <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div className="modal-header">
+                              <h5
+                                className="modal-title"
+                                id="exampleModalLabel"
+                              >
+                                Enter the Name
+                              </h5>
+                            </div>
+                            <div className="modal-body">
+                              <div className="input-group mb-3">
+                                <input
+                                  value={new_name}
+                                  onChange={(e) => {
+                                    set_newname(e.target.value);
+                                  }}
+                                  type="text"
+                                  className="form-control"
+                                  placeholder="Username"
+                                  aria-label="Username"
+                                  aria-describedby="basic-addon1"
+                                />
+                              </div>
+
+                              <h5
+                                className="modal-title"
+                                id="exampleModalLabel"
+                              >
+                                Enter the description
+                              </h5>
+                            </div>
+                            <div className="modal-body">
+                              <div className="input-group mb-3">
+                                <input
+                                  value={new_des}
+                                  onChange={(e) => {
+                                    set_newdes(e.target.value);
+                                  }}
+                                  type="text"
+                                  className="form-control"
+                                  placeholder="Description"
+                                  aria-label="Username"
+                                  aria-describedby="basic-addon1"
+                                />
+                              </div>
+                              
+                            </div>
+
+        <div className="modal-body">
+        <form>
+                                <div className="form-group">
+                                  <input
+                                    ref={new_img}
+                                    onChange={(ev) => {
+                                      set_newimg(ev.target.files[0]);
+                                    }}
+                                    type="file"
+                                    placeholder="Pic here"
+                                  ></input>
+                                </div>
+                              </form>
+        </div>
+        <div className="modal-footer">
+          <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button onClick = {()=>{Add_product()}} type="button" className="btn btn-primary" data-dismiss="modal">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</>        
           </div>
         </div>
       </header>
