@@ -1,6 +1,6 @@
 import Header from './Header'
 import React,{useState} from 'react'
-import {DataProvider,Data_contex} from './Data_contex'
+import {DataProvider} from './Data_Contex'
 import Ads from './Ads'
 import './App.css';
 

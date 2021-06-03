@@ -1,5 +1,5 @@
 import React, {useState,useContext } from "react";
-import {Data_contex} from './Data_contex'
+import {Data_contex} from './Data_Contex'
 const Header = (props) => {
   let [product,set_product]  = useContext(Data_contex)
   let [new_img,set_newimg] = useState()
