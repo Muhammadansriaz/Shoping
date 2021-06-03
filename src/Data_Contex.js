@@ -84,6 +84,6 @@ export const DataProvider = (props)=>{
         },
       ]);
       return(
-        <Data_contex.Provider value = {[product,set_product]}>{props.children}</Data_contex.Provider>
+        <Data_Contex.Provider value = {[product,set_product]}>{props.children}</Data_Contex.Provider>
       )
 }
