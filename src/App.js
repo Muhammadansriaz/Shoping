@@ -12,7 +12,6 @@ let [search, setSearch]= useState('');
     <div>
     <Header setSearch={setSearch}/>
     <Ads search={search}  setSearch={setSearch}/>
-    <Cart/>
     </div>
     </DataProvider>
 
