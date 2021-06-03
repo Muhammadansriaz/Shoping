@@ -1,7 +1,6 @@
 import Header from './Header'
-import Cart from './Cart'
 import React,{useState} from 'react'
-import {DataProvider} from './Data_contex'
+import {DataProvider,Data_contex} from './Data_contex'
 import Ads from './Ads'
 import './App.css';
 
