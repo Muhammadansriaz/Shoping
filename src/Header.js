@@ -1,7 +1,7 @@
 import React, {useState,useContext } from "react";
-import {Data_contex} from './Data_Contex'
+import {Data_Contex} from './Data_Contex'
 const Header = (props) => {
-  let [product,set_product]  = useContext(Data_contex)
+  let [product,set_product]  = useContext(Data_Contex)
   let [new_img,set_newimg] = useState()
   let [new_des,set_newdes]  = useState()
   let [new_name,set_newname]   = useState()

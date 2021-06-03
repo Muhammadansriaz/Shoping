@@ -1,6 +1,6 @@
 import React from 'react'
 import { createContext,useState } from 'react';
-export let Data_contex = createContext()
+export let Data_Contex = createContext()
 
 export const DataProvider = (props)=>{
     let [product, set_product] = useState([

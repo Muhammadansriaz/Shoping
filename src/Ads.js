@@ -1,8 +1,8 @@
 import "./Ads.css";
 import React, { useState, useContext } from "react";
-import {Data_contex} from './Data_Contex'
+import {Data_Contex} from './Data_Contex'
 const Ads = (props) => {
-  let [product,set_product]  = useContext(Data_contex)
+  let [product,set_product]  = useContext(Data_Contex)
   let [ename, set_ename] = useState("");
   let [img, set_img] = useState();
   
